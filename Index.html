@@ -10,18 +10,15 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body class="container p-2">
-<form >
-    <div class="row  container-fluid ">
-        <div class="col-1"></div>
-        <nav class="navbar navbar-light bg-light ">
-            <div class="container-sm">
-                <div class="row navbar-brand" href="#">
-                    <img src="NewsPaper.png" alt=""  class="d-inline-block  col-4">
-                    <p class="fs-3 col-6 my-auto">Le Journaliste</p>
-                </div>
-            </div>
-        </nav>
-        <div class="col-6 border border-light rounded mt-2 p-3">
+<form class="container">
+    <nav class="container  navbar navbar-light bg-light ">
+        <div class="row navbar-brand" href="#">
+           <img src="NewsPaper.png" alt=""  class="d-inline-block  col-3">
+           <h1 class="fs-3 col my-auto">Le Journaliste</h1>
+        </div>
+    </nav>
+    <main class="row justify-content-center">
+        <div class="col-7   border border-light">
             <div class="row">
                 <div class="col-12">
                     <h2>Devener journaliste</h2>
@@ -31,11 +28,11 @@
             <main class="row p-2">
                 <div class="row p-2">
                     <div class="col-1"></div>
-                    <label class="col-12"><p class="col-12 p-2">Nom :</p><input  class="col-12 " name="nom" type="text"></label>
+                    <label class="col-12"><p class="col-12 p-2">Nom :</p><input id="nom" class="col-12 " name="nom" type="text"></label>
                 </div>
                 <div class="row">
                     <div class="col-1"></div>
-                    <label class="col-12"><p class="col-12 fs-6 p-2">Brève biographie :</p> <textarea placeholder="Max 120 Caractères" name="bio" class="col-12 placeholder-sm" maxlength="120" ></textarea></label>
+                    <label class="col-12"><p class="col-12 fs-6 p-2">Brève biographie :</p> <textarea id="bio" placeholder="Max 120 Caractères" name="bio" class="col-12 placeholder-sm" maxlength="120" ></textarea></label>
                 </div>
                 <div class="row p-2">
                     <div class="col-12">
@@ -43,7 +40,7 @@
                             <div class="col-7">
                                 <div class="row container-sm">
                                     <label class="row justify-content-between">Spécialitée :
-                                        <select  class="col-8" name="specialite">
+                                        <select id="specialite" class="col-8" name="specialite">
                                             <option></option>
                                             <option value="fait_divers">Fait Divers</option>
                                             <option value="politique">Politique</option>
@@ -66,7 +63,7 @@
                 </div>
                 <div class="row justify-content-end p-2 m-3">
                     <div class="col-2">
-                    <input id="soumettre" class="btn btn-light btn-sm border-2 border dark" type="submit" value="Soumettre">
+                    <input id="soumettre" disabled class="btn btn-light btn-sm border-2 border dark" type="submit" value="Soumettre">
                     </div>
                     <div class="col-2">
                     <input class="btn btn-light btn-sm border-2 border dark" type="reset" value="Annuler">
@@ -74,38 +71,29 @@
                 </div>
             </main>
         </div>
-        <div class="col-4 p-1 ms-3">
+        <div class="col-3 ">
             <div class="row">
                 <h2>Notre équipe</h2>
             </div>
-            <table class="table table-bordered">
+            <table class="table table-bordered ">
                 <tbody id="table">
                 <tr>
-                    <td  class="row g-0">
-                        <div class="col-6">
-                        <p class="col-3 my-auto">nom</p>
-                        </div>
-                        <div class="col-6 border border-primary rounded-pill">
-                            <p class="col-3 m-auto">couleur</p>
-                        </div>
+                    <td  class="row justify-content-between">
+                        <p class="col my-auto ">Loki</p>
+                        <p style="background-color: darkorange" class="col d-flex justify-content-center m-auto rounded-pill">Sport</p>
                     </td>
 
                 </tr>
-                <tr >
-                    <td  class="row g-0">
-                        <div class="col-6">
-                            <p class="col-3 my-auto">nom</p>
-                        </div>
-                        <div class="col-6 border border-primary rounded-pill">
-                            <p class="col-3 m-auto ">couleur</p>
-                        </div>
+                <tr>
+                    <td  class="row justify-content-between">
+                            <p class="col my-auto ">Maze</p>
+                            <p style="background-color: cornflowerblue" class="col m-auto d-flex justify-content-center rounded-pill">Actualité</p>
                     </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-        <div class="col-1"></div>
-    </div>
+    </main>
 </form>
 </body>
 </html>
